@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade In from a Point Example</title>
+    <script src="JS/index.js"></script>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto;
+            border: 1px solid black;
+            padding: 10px;
+            position: relative;
+            height: 300px;
+        }
+
+        .child {
+
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            justify-self: center;
+            transition: all 5s ease;
+        }
+
+        .gd-c1{
+            grid-column-start: 1;
+        }
+
+        .gd-c2{
+            grid-column-start: 2;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: scale(1);
+            transform-origin: 0px 1000px 0px;
+        }
+
+        .fade-out {
+            position: absolute;
+            grid-column-start: 1;
+            opacity: 1;
+            transform: scale(0.1);
+            transform-origin: ;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="parent" class="parent">
+        <div id="child1" class="child fade-out">child1</div>
+        <div id="child2" class="child fade-out">child2</div>
+    </div>
+    <div id="parent2" class="parent">
+    </div>
+    <button onclick="move()">move</button>
+
+</body>
+</html>
